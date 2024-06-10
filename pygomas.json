@@ -18,7 +18,7 @@
             "asl": "bdimedic.asl"
         },
          {
-            "rank": "agenteBase.drunkenSoldier",
+            "rank": "Extra.Soldier",
             "name": "borracho_dalpdel",
             "password": "secret",
             "amount": 8,
