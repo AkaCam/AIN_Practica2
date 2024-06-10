@@ -1,47 +1,47 @@
 {
     "host": "gtirouter.dsic.upv.es",
-    "manager": "manager_yourlogin",
+    "manager": "manager_dalpdel",
     "manager_password": "secret",
-    "service": "service_yourlogin",
+    "service": "service_dalpdel",
     "service_password": "secret",
     "axis": [
 		{
-            "rank": "BDISoldier",
-            "name": "axis_yourlogin",
+            "rank": "BDIFieldOp",
+            "name": "soldados_dalpdel",
             "password": "secret",
-            "amount": 8,
-            "asl": "bdisoldier.asl"
+            "asl": "bdifieldop.asl"
         },
         {
             "rank": "BDIMedic",
-            "name": "medic_axis_yourlogin",
+            "name": "medic_axis_dalpdel",
             "password": "secret",
             "asl": "bdimedic.asl"
         },
          {
-            "rank": "BDIFieldOp",
-            "name": "fieldop_axis_yourlogin",
+            "rank": "agenteBase.drunkenSoldier",
+            "name": "borracho_dalpdel",
             "password": "secret",
-            "asl": "bdifieldop.asl"
+            "amount": 8,
+            "asl": "bdisoldier_DM.asl"
         }
     ],
      "allied": [
 		{
             "rank": "BDISoldier",
-            "name": "allied_yourlogin",
+            "name": "allied_dalpdel",
             "password": "secret",
             "amount": 8,
             "asl": "bdisoldier.asl"
         },
         {
             "rank": "BDIMedic",
-            "name": "medic_allied_yourlogin",
+            "name": "medic_allied_dalpdel",
             "password": "secret",
             "asl": "bdimedic.asl"
         },
          {
             "rank": "BDIFieldOp",
-            "name": "fieldop_allied_yourlogin",
+            "name": "fieldop_allied_dalpdel",
             "password": "secret",
             "asl": "bdifieldop.asl"
         }
