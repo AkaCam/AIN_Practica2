@@ -98,5 +98,3 @@ def is_between(self, a:tuple, b:tuple, c:tuple):
       ac_length = np.linalg.norm(ac)
       
       return np.isclose(ab_length + bc_length, ac_length)
-      
-      

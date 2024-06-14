@@ -64,3 +64,36 @@
 +enemies_in_fov(ID,Type,Angle,Distance,Health,Position)
   <- 
   .shoot(3,Position).
+
+// Fieldop Help
+
++ammoproposal(Pos)[source(A)]: not ayudando(_,_)
+  <-
+    ?health(MiSalud);
+    ?position(MiPos);
+    .send(A,tell,mybidF(MiPos,MiSalud));
+    +ayudando(A,Pos);
+    -ammoproposal(_);
+    .print("enviada propuesta de ayuda").
+
++acceptproposal[source(A)]: ayudando(A,Pos)
+  <-
+    .print("Me voy a ayudar al agente: ", A, "a la posición: ", Pos);
+    .goto(Pos).
+
++cancelproposal[source(A)]: ayudando(A,Pos)
+  <-
+    .print("Cancelan mi proposicion.");
+    -ayudando(A,Pos).
+
++target_reached(T): ayudando(A,T)
+  <-
+    .print("AMMOPACK! para el agente: ", A);
+    .reload;
+    ?miposicion(P);
+    .goto(P);
+    -ayudando(A,T).
+
++threshold_ammo(H):
+  <-
+  .reload.

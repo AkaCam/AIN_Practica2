@@ -1,0 +1,35 @@
+
++pedirsalud
+  <-
+    .print("Lider, necesito curarme");
+    -+posM([]);
+    -+salM([]);
+    -+idM([]);
+    .get_service("lider");
+    .wait(500);
+    ?lider(Lider);
+    ?position(Posicion);
+    .send(Lider,tell,solSalud(Posicion));
+    .wait(1500).
+
++ammo(A): A>=20 & pedirammo
+  <-
+    -pedirammo.
+
++ammo(A): A<20 & not pedirammo
+  <-
+    +pedirammo.
+
++pedirammo
+  <-
+    .print("Lider, necesito munición");
+    -+posF([]);
+    -+salF([]);
+    -+idF([]);
+    .get_service("lider");
+    .wait(2000);
+    ?lider(Lider);
+    ?position(Posicion);
+    .send(Lider,tell,solAmmo(Posicion));
+    .wait(1500).
+
